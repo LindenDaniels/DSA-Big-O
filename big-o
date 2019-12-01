@@ -1,0 +1,36 @@
+1. The Big O for this is constant time, because the person is just going with the first person available with a golden and that wants to have a playdate.
+2. The second one is linear time O(n), because you have to go and ask each person individually, and the time to ask will increase with the number of people available.
+
+2. Even or odd: The Big O for this is constant time, because it only has to run one time.
+3. Are you here?: O(n^2) becaue it is a nested loop that requires 2 levels of looping over an input.
+4. Doubler: O(n) because the loop has to iterate over the length of the array
+5. Naive search: O(2^n) because the longer the array, the longer it will have to search and it has to keep searching until it reaches the end of the array.
+6. Creating pairs: O(n^2) because it is a nested loop that requires 2 levels of looping over the input
+7. Compute the seguence: O(n) - loops over the array and only has to return one result. Unsure of what the function does, though.
+8. An efficient search: O(log(n)) - it cuts the problem size each round through.
+9. Random element: O(i), it only needs to look at one element and return one result
+10. What am i?: O(1), it will check an input only once to see if it is a prime number.
+11. function towersOfHanoi(numDisks, start, transformer, end) {
+    //How many discs???
+    console.log('I am recursive')
+    if (numDisks === 0) {
+        return
+    }
+
+    towersOfHanoi(numDisks - 1, start, end, transformer)
+    console.log(`Moved ${numDisks} from ${start} to ${end}`)
+    towersOfHanoi(numDisks - 1, transformer, start, end)
+}
+
+/*
+    After 7 recurive calls the first disk is moved from A to C
+    3 disks: 7 moves
+    4 disks: 15 moves
+    5 disks: 31 moves
+    O(2^n - 1)  ---> O(2^n)
+*/
+
+towersOfHanoi(5, 'A', 'B', 'C')
+
+12. - 14.: Go over with mentor.
+
